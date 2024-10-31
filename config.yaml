@@ -1,14 +1,14 @@
 observation_date: # 01/27/24
-target_list: targets/GaryImm
+target_list: targets/Messier
 type_filter: # e.g. Galaxy, Nebula 
 output_dir: out
-live_mode: false
+live_mode: true
 
 location:
-  longitude: 11d34m51.50s
-  latitude: 48d08m10.77s
-  elevation: 519
-  timezone: Europe/Berlin
+  longitude: 51d24m57.64s
+  latitude: 1d43m36.77s W
+  elevation: 140
+  timezone: Europe/London
 
 environment:
   pressure: 1.022
