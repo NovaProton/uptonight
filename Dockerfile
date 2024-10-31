@@ -5,6 +5,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /app
 
+CMD ["python", "server.py"]
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends python3-pip python3-venv python3-dev pkg-config libhdf5-dev build-essential gcc && \
     cd /usr/local/bin && \
