@@ -3,7 +3,7 @@ FROM ubuntu:noble AS compile-image
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-WORKDIR /app
+WORKDIR /app  # Ensure the work directory is set early
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends python3-pip python3-venv python3-dev pkg-config libhdf5-dev build-essential gcc && \
@@ -31,7 +31,7 @@ RUN venv/bin/pyinstaller --recursive-copy-metadata matplotlib --collect-all date
 # Run image
 FROM ubuntu:noble AS runtime-image
 
-WORKDIR /app
+WORKDIR /app  # Set the work directory again for the runtime image
 
 # Copy only the necessary files from the build stage
 COPY --from=compile-image /app/dist/main /app/main
