@@ -5,8 +5,8 @@ output_dir: out
 live_mode: true
 
 location:
-  longitude: 1d43m36.77s
-  latitude:  51d24m57.64s
+  longitude: -1.726880 # 1d43m36.77s
+  latitude:  51.416012 # 51d24m57.64s
   elevation: 140
   timezone: Europe/London
 
